@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+<!-- <TextView-->
+<!--     android:id="@+id/tvInput"-->
+<!--     android:layout_width="match_parent"-->
+<!--     android:layout_height="250dp"-->
+<!--     android:background="#efefef"-->
+<!--     android:textSize="48sp"-->
+<!--     android:maxLength="12"-->
+<!--     android:padding="10dp"-->
+<!--     android:text="@string/zero"-->
+<!--     android:gravity="right|bottom|center_vertical"-->
+<!--     tools:ignore="RtlHardcoded" />-->
+    <EditText
+        android:layout_width="match_parent"
+        android:inputType="text"
+        android:hint="@string/result"
+        android:id="@+id/tvInput"
+        android:text="@string/_0"
+        android:gravity="right|bottom"
+        android:textSize="36sp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+
+        tools:ignore="LabelFor,RtlHardcoded"
+        android:autofillHints="789" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:layout_weight="1"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/but_c"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:backgroundTint="#FF9800"
+        android:onClick="deleteCase"
+        android:text="@string/c"
+        tools:ignore="ButtonStyle,NestedWeights,OnClick" />
+
+    <Button
+        android:id="@+id/but_x"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:backgroundTint="#FF9800"
+        android:onClick="deleteCase"
+        android:text="@string/x"
+        tools:ignore="ButtonStyle,OnClick" />
+
+    <Button
+        android:id="@+id/but_d"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:backgroundTint="#FF9800"
+        android:onClick="buPer"
+        android:text="@string/percent"
+        tools:ignore="ButtonStyle" />
+
+    <Button
+        android:id="@+id/but_div"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:backgroundTint="#FF9800"
+        android:onClick="operatorCase"
+        android:text="@string/divide"
+        tools:ignore="ButtonStyle" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/but_sev"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FF9800"
+            android:onClick="caseNumber"
+            android:text="@string/seven"
+            tools:ignore="ButtonStyle,NestedWeights" />
+
+        <Button
+            android:id="@+id/but_ei"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FF9800"
+            android:onClick="caseNumber"
+            android:text="@string/eight"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/but_ni"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FF9800"
+            android:onClick="caseNumber"
+            android:text="@string/nine"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/but_mul"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FF9800"
+            android:onClick="operatorCase"
+            android:text="@string/multiply"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/but_for"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FF9800"
+            android:onClick="caseNumber"
+            android:text="@string/four"
+            tools:ignore="ButtonStyle,NestedWeights" />
+
+        <Button
+            android:id="@+id/but_fiv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FF9800"
+            android:onClick="caseNumber"
+            android:text="@string/five"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/but_six"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FF9800"
+            android:onClick="caseNumber"
+            android:text="@string/six"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/but_min"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FF9800"
+            android:onClick="operatorCase"
+            android:text="@string/minus"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/but_one"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FF9800"
+            android:onClick="caseNumber"
+            android:text="@string/one"
+            tools:ignore="ButtonStyle,NestedWeights,OnClick" />
+
+        <Button
+            android:id="@+id/but_two"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FF9800"
+            android:onClick="caseNumber"
+            android:text="@string/two"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/but_thr"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FF9800"
+android:onClick="caseNumber"
+            android:text="@string/three"
+            tools:ignore="ButtonStyle" />
+
+
+        <Button
+            android:id="@+id/but_plus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FF9800"
+            android:onClick="operatorCase"
+            android:text="@string/plus"
+            tools:ignore="ButtonStyle" />
+<!--        android:onClick="onDigit"-->
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/but_do"
+            android:onClick="caseNumber"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FF9800"
+
+            android:text="@string/dot"
+            tools:ignore="ButtonStyle,NestedWeights,OnClick" />
+
+        <Button
+            android:id="@+id/but_zer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="caseNumber"
+            android:backgroundTint="#FF9800"
+            android:text="@string/zero"
+            tools:ignore="ButtonStyle" />
+
+
+        <Button
+            android:id="@+id/but_eq"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#FF9800"
+            android:onClick="equalCase"
+            android:text="@string/equal"
+            tools:ignore="ButtonStyle,OnClick" />
+    </LinearLayout>
+</LinearLayout>

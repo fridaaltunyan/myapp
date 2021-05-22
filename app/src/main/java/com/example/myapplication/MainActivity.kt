@@ -124,16 +124,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun deleteCase(view: View) {
-//        val buttonSel: Button = view as Button
-//        val hey: String = oldNumber.dropLast(oldNumber.length)
-//        when (buttonSel.id) {
-//            R.id.but_d -> {
-//                findViewById<Button>(R.id.but_c).text = "0"
-//                newOp = true
-//            }
-//
-//        }
-
         findViewById<EditText>(R.id.tvInput).setText("")
         newOp = true
         zero= false

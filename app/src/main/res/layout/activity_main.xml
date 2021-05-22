@@ -7,17 +7,6 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-<!-- <TextView-->
-<!--     android:id="@+id/tvInput"-->
-<!--     android:layout_width="match_parent"-->
-<!--     android:layout_height="250dp"-->
-<!--     android:background="#efefef"-->
-<!--     android:textSize="48sp"-->
-<!--     android:maxLength="12"-->
-<!--     android:padding="10dp"-->
-<!--     android:text="@string/zero"-->
-<!--     android:gravity="right|bottom|center_vertical"-->
-<!--     tools:ignore="RtlHardcoded" />-->
     <EditText
         android:layout_width="match_parent"
         android:inputType="text"
@@ -64,8 +53,8 @@
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:backgroundTint="#FF9800"
-        android:onClick="buPer"
         android:text="@string/percent"
+        android:onClick="operatorCase"
         tools:ignore="ButtonStyle" />
 
     <Button
@@ -205,7 +194,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:backgroundTint="#FF9800"
-android:onClick="caseNumber"
+            android:onClick="caseNumber"
             android:text="@string/three"
             tools:ignore="ButtonStyle" />
 
@@ -230,12 +219,11 @@ android:onClick="caseNumber"
 
         <Button
             android:id="@+id/but_do"
-            android:onClick="caseNumber"
+            android:onClick="buPer"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:backgroundTint="#FF9800"
-
             android:text="@string/dot"
             tools:ignore="ButtonStyle,NestedWeights,OnClick" />
 

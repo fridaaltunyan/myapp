@@ -19,12 +19,12 @@ class MainActivity : AppCompatActivity() {
 
     fun caseNumber(view: View) {
         if (newOp) {
-            //findViewById<TextView>(R.id.tvInput).setText("")
+
             findViewById<EditText>(R.id.tvInput).setText("")
         }
         newOp = false
         val buttonSel: Button = view as Button
-//        var myClick = findViewById<TextView>(R.id.tvInput).text.toString()
+
         var myClick = findViewById<EditText>(R.id.tvInput).text.toString()
 
         when(buttonSel.id)
@@ -78,7 +78,6 @@ class MainActivity : AppCompatActivity() {
                 zero=true
             }
         }
-        //findViewById<TextView>(R.id.tvInput).text = myClick
         findViewById<EditText>(R.id.tvInput).setText(myClick)
     }
 
@@ -86,8 +85,6 @@ class MainActivity : AppCompatActivity() {
     fun operatorCase(view: View) {
         newOp = true
         zero = false
-//        var op = "+"
-//        var oldNumber = ""
 
 
         val buSelect= view as Button
@@ -99,7 +96,7 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.but_div ->
             {
-                op="÷"
+                op="/"
             }
             R.id.but_min->
             {
@@ -109,12 +106,13 @@ class MainActivity : AppCompatActivity() {
             {
                 op="+"
             }
+            R.id.but_d->{
+                op="%"
+            }
         }
-      //oldNumber  = findViewById<TextView>(R.id.tvInput).text as String
         oldNumber  = findViewById<EditText>(R.id.tvInput).text.toString()
         newOp=true
         zero =false
-       // findViewById<TextView>(R.id.tvInput).text = op
         findViewById<EditText>(R.id.tvInput).setText(op)
 
     }
@@ -135,14 +133,14 @@ class MainActivity : AppCompatActivity() {
 //            }
 //
 //        }
-        //findViewById<TextView>(R.id.tvInput).text = ""
+
         findViewById<EditText>(R.id.tvInput).setText("")
         newOp = true
         zero= false
     }
 
     fun equalCase(view: View) {
-      //  val newNumber: String = findViewById<TextView>(R.id.tvInput).text.toString()
+
         val newNumber: String = findViewById<EditText>(R.id.tvInput).text.toString()
         var result = 0.0
         when (op) {
@@ -158,9 +156,10 @@ class MainActivity : AppCompatActivity() {
             "-" -> {
                 result = oldNumber.toDouble() - newNumber.toDouble()
             }
+            "%"->{
+                result=  (oldNumber.toDouble() * newNumber.toDouble())/100
+            }
         }
-
-        //findViewById<TextView>(R.id.tvInput).text = result.toString()
         findViewById<EditText>(R.id.tvInput).setText(result.toString())
         newOp=true
     }
